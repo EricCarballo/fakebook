@@ -62,7 +62,7 @@ public class frmBienvenido extends javax.swing.JFrame {
         lblAcepto.setFont(new java.awt.Font("Sans Serif Collection", 1, 14)); // NOI18N
         lblAcepto.setForeground(new java.awt.Color(255, 255, 255));
         lblAcepto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblAcepto.setText("Entrar");
+        lblAcepto.setText("GRACIAS");
         lblAcepto.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         lblAcepto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -140,13 +140,6 @@ public class frmBienvenido extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lblAceptoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAceptoMouseClicked
-        frmPrincipal iniciar = new frmPrincipal();
-        this.dispose();
-        iniciar.setVisible(true);
-        
-    }//GEN-LAST:event_lblAceptoMouseClicked
-
     private void lblAceptoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAceptoMouseEntered
         btnAceptar.setBackground(new Color(62,143,80));
     }//GEN-LAST:event_lblAceptoMouseEntered
@@ -165,6 +158,10 @@ public class frmBienvenido extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_pnlArrastrableMousePressed
+
+    private void lblAceptoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAceptoMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_lblAceptoMouseClicked
 
     /**
      * @param args the command line arguments

@@ -2,7 +2,10 @@ package vista;
 
 import com.google.gson.Gson;
 import control.libroController;
+import control.publicacionesController;
+import java.util.Date;
 import java.util.List;
+import modelo.publicacionesModel;
 import modelo.usuarioModel;
 import org.bson.Document;
 
@@ -108,16 +111,15 @@ public class Libros extends javax.swing.JFrame {
 
     private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
         Gson gson = new Gson();
-        usuarioModel libro = new usuarioModel();
-        libro.setTitulo("Se me va a quemar el corazón");
-        libro.setAnio("2020");
-        libro.setAutor("Mon Laferte");
-        libro.setGenero("Amor");
+        publicacionesModel libro = new publicacionesModel();
+        libro.setContenido("Hola");
+        libro.setCorreo("ericjasiel.11@gmail.com");
+        libro.setFechaHora(new Date().toString());
+        libro.setId("645b1a5acff31903cc354776");
         
         Document dbo = Document.parse(gson.toJson(libro));
-        libroController LC = new libroController();
-        LC.Insertar(dbo);
-        LC.listarLibros();
+        publicacionesController LC = new publicacionesController();
+        LC.NuevaPublicacion(dbo);
     }//GEN-LAST:event_btnNuevoActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
